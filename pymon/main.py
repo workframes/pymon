@@ -1,9 +1,11 @@
 # import
+import json
 from requests_html import HTMLSession
 from .util import *
 
+
 '''
-**Item Request Arry Setup**
+Returned Item Arry Setup
 
 [0] = Best Price
 [1] = Reent Average Price(RAP)
@@ -25,8 +27,12 @@ class pymon:
         session = HTMLSession()
 
         r = session.get(link)
-        elements = r.html.find(".value-stat-data")
+        if(r.status_code == 200):
+            elements = r.html.find(".value-stat-data")
+            data = elements[2].text
         
-        return(elements[2].text)
+            return int(data.replace(",", ""))
+        else:
+            return json.dumps({"error": f"Unable to fetch data due to Item Id being invalid or request error."})
 
   

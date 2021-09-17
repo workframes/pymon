@@ -26,11 +26,11 @@ This module allows you to fetch Item data, Example: RAP, Value, Graphs, ETC. `py
 To pip install `pymon` from github:
 
 ```bash
-pip install git+https://github.com/workframes/pymongit
+pip install git+https://github.com/workframes/pymon.git
 ```
 or
 ```bash
-pip3 install git+https://github.com/workframes/pymongit
+pip3 install git+https://github.com/workframes/pymon.git
 ```
 
 > ## **Items**

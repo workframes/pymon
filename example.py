@@ -4,6 +4,7 @@ import json
 pymon = pymon()
 
 SearchId = 1029025
+UserId = 674068579
 
 print({
     "Best Price: " + str(pymon.ItemBestPrice(SearchId)),
@@ -20,5 +21,5 @@ print({
     "Percent Hoarded: " + str(pymon.ItemPercentHoarded(SearchId)),
 })
 
-print(pymon.PlayerAssets(674068579))
+print(pymon.PlayerAssets(UserId))
 

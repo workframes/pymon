@@ -1,4 +1,4 @@
-> # `pymon` - [Rolimons](https://www.rolimons.com/) Api Wrapper
+> # `pymon` - [Rolimons](https://www.rolimons.com/) API Wrapper
 
 ## Description
 This module allows you to fetch Item data, Example: RAP, Value, Graphs, ETC. `pymon` interacts with the websites private API to extract data.
@@ -17,6 +17,8 @@ This module allows you to fetch Item data, Example: RAP, Value, Graphs, ETC. `py
     - [ItemPremiumOwnerCount](#itempremiumownercount)
     - [ItemHoardedCopies](#itemhoardedcopies)
     - [ItemPercentHoarded](#itempercenthoarded)
+- [Players](#players)
+    - [PlayerAssets](#playerassets)    
 
 
 ## Installation
@@ -127,4 +129,13 @@ from pymon import pymon
 pymon = pymon()
 
 pymon.ItemPercentHoarded(ItemID)
+```
+> ## **Players**
+### PlayerAssets
+
+```py
+from pymon import pymon
+pymon = pymon()
+
+print(pymon.PlayerAssets(UserId))
 ```

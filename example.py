@@ -1,8 +1,9 @@
 from pymon import pymon
+import json
 
 pymon = pymon()
 
-SearchId = 182774911
+SearchId = 1029025
 
 print({
     "Best Price: " + str(pymon.ItemBestPrice(SearchId)),
@@ -19,4 +20,5 @@ print({
     "Percent Hoarded: " + str(pymon.ItemPercentHoarded(SearchId)),
 })
 
+print(pymon.PlayerAssets(674068579))
 

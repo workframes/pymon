@@ -1,5 +1,6 @@
 # import
 import json
+import requests
 from requests_html import HTMLSession
 from .util import *
 
@@ -8,7 +9,7 @@ global session
 session = HTMLSession()
 
 '''
-Returned Item Arry Setup
+/Returned Item Array Setup/
 
 [0] = Best Price
 [1] = Recent Average Price(RAP)
@@ -25,6 +26,23 @@ Returned Item Arry Setup
 '''
 
 class pymon:
+    def PlayerAssets(self, Id):
+        link = Base_Link + "/api/playerassets/" + str(Id)
+        headers = {
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36",
+        }
+
+        r = requests.get(link, headers=headers)
+        if(r.status_code == 200):
+            result = r.json()
+            playerAssets = result["playerAssets"]
+            returnArray = []
+
+            for asset in playerAssets:
+                returnArray.append(asset)
+
+            return returnArray
+            
     def ItemBestPrice(self, Id):
         link = Base_Link + "/item/" + str(Id)
 

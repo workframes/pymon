@@ -6,20 +6,22 @@ pymon = pymon()
 SearchId = 1029025
 UserId = 674068579
 
-print({
-    "Best Price: " + str(pymon.ItemBestPrice(SearchId)),
-    "Recent Average Price: " + str(pymon.ItemRAP(SearchId)),
-    "Value: " + str(pymon.ItemValue(SearchId)),
-    "Demand: " + str(pymon.ItemDemand(SearchId)),
-    "Total Copies: " + str(pymon.ItemTotalCopies(SearchId)),
-    "Available Copies: " + str(pymon.ItemAvailableCopies(SearchId)),
-    "Premium Copies: " + str(pymon.ItemPremiumCopies(SearchId)),
-    "Deleted Copies: " + str(pymon.ItemDeletedCopies(SearchId)),
-    "Owners: " + str(pymon.ItemOwnerCount(SearchId)),
-    "Premium Owners: " + str(pymon.ItemPremiumOwnerCount(SearchId)),
-    "Hoarded Copies: " + str(pymon.ItemHoardedCopies(SearchId)),
-    "Percent Hoarded: " + str(pymon.ItemPercentHoarded(SearchId)),
-})
-
-print(pymon.PlayerAssets(UserId))
-
+print(pymon.IdToName(SearchId))
+print(pymon.ItemBestPrice(SearchId))
+print(pymon.ItemRAP(SearchId))
+print(pymon.ItemValue(SearchId))
+print(pymon.LimitedCatalog("NAME"))
+print(pymon.LimitedCatalog("ID"))
+print(pymon.ItemDemand(SearchId))
+print(pymon.ItemAcronym(SearchId))
+print(pymon.ItemTrend(SearchId))
+print(pymon.ItemProjectedCheck(SearchId))
+print(pymon.LimitedCount())
+print(pymon.ItemTotalCopies(SearchId))
+print(pymon.ItemAvailableCopies(SearchId))
+print(pymon.ItemPremiumCopies(SearchId))
+print(pymon.ItemDeletedCopies(SearchId))
+print(pymon.ItemOwnerCount(SearchId))
+print(pymon.ItemPremiumOwnerCount(SearchId))
+print(pymon.ItemHoardedCopies(SearchId))
+print(pymon.ItemPercentHoarded(SearchId))

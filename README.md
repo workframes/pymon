@@ -5,10 +5,15 @@ This module allows you to fetch Item data, Example: RAP, Value, Graphs, ETC. `py
 
 ## Table Of Contents
 - [Items](#items)
+    - [LimitedCatalog](#limitedcatalog)
+    - [IdToName](#idtoname)
     - [ItemBestPrice](#itembestprice)
     - [ItemRAP](#itemrap)
     - [ItemValue](#itemvalue)
     - [ItemDemand](#itemdemand)
+    - [ItemTrend](#itemtrend)
+    - [ItemProjectedCheck](#itemprojectedcheck)
+    - [ItemAcronym](#itemacronym)
     - [ItemTotalCopies](#itemtotalcopies)
     - [ItemAvailableCopies](#itemavailablecopies)
     - [ItemPremiumCopies](#itempremiumcopies)
@@ -34,6 +39,40 @@ pip3 install git+https://github.com/workframes/pymon.git
 ```
 
 > ## **Items**
+### IdToName
+
+```py
+from pymon import pymon 
+pymon = pymon()
+
+pymon.LimitedCatalog()
+```
+> OR
+
+```py
+from pymon import pymon 
+pymon = pymon()
+
+pymon.LimitedCatalog("ID")
+```
+> OR 
+
+```py
+from pymon import pymon 
+pymon = pymon()
+
+pymon.LimitedCatalog("NAME")
+```
+
+### IdToName
+
+```py
+from pymon import pymon 
+pymon = pymon()
+
+pymon.IdToName(ItemId)
+```
+
 ### ItemBestPrice
 
 ```py
@@ -65,6 +104,29 @@ from pymon import pymon
 pymon = pymon()
 
 pymon.ItemDemand(ItemID)
+```
+### ItemTrend
+
+```py
+from pymon import pymon
+pymon = pymon()
+
+pymon.ItemTrend(ItemID)
+```
+### ItemProjectedCheck
+```py
+from pymon import pymon
+pymon = pymon()
+
+pymon.ItemProjectedCheck(ItemID)
+```
+### ItemAcronym
+
+```py
+from pymon import pymon
+pymon = pymon()
+
+pymon.ItemAcronym(ItemID)
 ```
 ### ItemTotalCopies
 
